@@ -8,13 +8,13 @@ import os
 import datetime
 import stat
 import pwd
-import datetime
 import time
+
 ##################################################################################################################
 #					SCAN SHELL TOOL	 							 #	
-#			       	CODED by Big-Small Creep							 #
-#               CODING WILL ChANGE THE WORLD - IF NOT, WILL CHANGE YOUR MIND					 #
-#														 #			
+#			       	CODED by Big-Small Creep						         #
+#               CODING WILL ChANGE THE WORLD - OTHERWISE IT COULD CHANGE YOUR MIND             			 #
+#										                                 #
 ##################################################################################################################
 
 parser = argparse.ArgumentParser()
@@ -33,30 +33,45 @@ if not os.path.exists(dir):
         print " Directory entered does not exist?"
 else:
 	
-	def input_day(day):
-		hour = day * 24
-		today =datetime.date.today()	
-		someday = today - datetime.timedelta(hours=hour)
+	def input_day(file_name):
 		
-		return someday.strftime("%Y-%m-%d")		
+		if day is not None:
+			
+			hour = day * 24
+			today =  datetime.datetime.now()	
+			#someday = today - datetime.timedelta(hours=hour)
+			file_date = datetime.datetime.utcfromtimestamp(os.path.getmtime(file_name))
+			
+			sub_time = today - file_date
+			
+			if (sub_time < datetime.timedelta(hours=hour)):
+				return oct(os.stat(file_name)[0])[-3:],pwd.getpwuid(os.stat(file_name).st_uid)[0],modi_date(file_name),file_name
+				
+			else:
+				return "";
+		else:
+			return oct(os.stat(file_name)[0])[-3:],pwd.getpwuid(os.stat(file_name).st_uid)[0],modi_date(file_name),file_name
+		#return someday.strftime("%Y-%m-%d")		
 
 	def modi_date(file_name): # file time
 
 		return time.strftime("%Y-%m-%d", time.gmtime(os.path.getmtime(file_name)))
 
-
-	def own(file_name):       #file permission 
+	
+	def own(file_name):       #file permission
+		 
 		return getpwuid(stat(file_name).st_uid).pw_name
 
 
 	def open_file(dir_file): #Open file
-	
+		
        		cross_file = open(dir_file,'r')
         	o_cross_file = cross_file.read()
         	cross_file.close()
         	matches = filenames.findall(o_cross_file)
 		if len(matches) != 0:
-			print oct(os.stat(dir_file)[0])[-3:],pwd.getpwuid(os.stat(dir_file).st_uid)[0],modi_date(dir_file),dir_file,matches
+			#print oct(os.stat(dir_file)[0])[-3:],pwd.getpwuid(os.stat(dir_file).st_uid)[0],input_day(dir_file),matches
+			print input_day(dir_file)
 			#randay =  modi_date(dir_file) + datetime.date.today()
 			#print randay.days
 			#print datetime.date.today()
@@ -76,8 +91,7 @@ else:
                                         open_folder(file1)
 	# Main()	
 	patternarray = ['cmd', 'ender' ,'hello']
-
-        print "\nthe files listed below are might be the shell \n"
+	print "\nthe files listed below are might be the shell \n"
 
         for x in patternarray:
 

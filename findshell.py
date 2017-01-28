@@ -50,7 +50,7 @@ else:
     def input_day(file_name):
 
         if day is None:
-            return oct(os.stat(file_name)[
+            print oct(os.stat(file_name)[
                        0])[-3:], pwd.getpwuid(os.stat(file_name).st_uid)[0], modi_date(file_name), file_name
 
         else:
@@ -67,7 +67,6 @@ else:
                            0])[-3:], pwd.getpwuid(os.stat(file_name).st_uid)[0], modi_date(file_name), file_name
 
 
-        # return someday.strftime("%Y-%m-%d")
 
     def modi_date(file_name):  # file time
 
@@ -84,12 +83,18 @@ else:
 
         cross_file = open(dir_file, 'r')
         o_cross_file = cross_file.read()
-
+        count = 0
         for x in patternarray:
             matches = re.findall(x,o_cross_file)
+
             if len(matches) != 0:
-                input_day(dir_file)
-        cross_file.close()
+                count += 1
+                #input_day(dir_file)
+                #print matches
+                cross_file.close()
+        if count > 1:
+            input_day(dir_file)
+
     def open_folder(dir_folder):  # Open Folder
 
         if type is not None:
@@ -105,7 +110,17 @@ else:
                 if os.path.isdir(file1):
                     open_folder(file1)
     # Main()
-    patternarray = ['eval', 'base64_decode' ,'gzinflate','fsockopen','pfsockopen','exec','system','passthru','stream_socket_client','preg_replace','iframe']
+    patternarray = ['eval',
+                    'base64_decode' ,
+                    'gzinflate',
+                    'fsockopen',
+                    'pfsockopen',
+                    'exec',
+                    'system',
+                    'passthru',
+                    'stream_socket_client',
+                    'preg_replace',
+                    'iframe']
     print "\n----------------------------------------------------------- \n"
 
 

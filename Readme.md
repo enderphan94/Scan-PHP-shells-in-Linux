@@ -28,7 +28,6 @@ optional arguments:
                         
 # Example:
 
-ender@ender-VirtualBox:~/Documents$ python Eiker.py -D /home/ender/Downloads/
-
-    
+$ python Eiker.py -D /home/ender/Downloads/
+![Alt text](http://i.imgur.com/W3NZ4Bq.png)
     

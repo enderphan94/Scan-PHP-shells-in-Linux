@@ -9,6 +9,7 @@ import datetime
 import stat
 import pwd
 import time
+from termcolor import colored
 
 
 ##########################################################################
@@ -47,25 +48,15 @@ if not os.path.exists(dir):
     print  "Directory entered does not exist?"
 else:
 
-    def input_day(file_name):
 
-        if day is None:
-            print oct(os.stat(file_name)[
-                       0])[-3:], pwd.getpwuid(os.stat(file_name).st_uid)[0], modi_date(file_name), file_name
 
+    def to_count(dir_file,count):
+        if count >= 6:
+            print colored((oct(os.stat(dir_file)[0])[-3:], pwd.getpwuid(os.stat(dir_file).st_uid)[0], modi_date(dir_file), dir_file),'red')
+        elif count < 6 and count > 2:
+            print colored((oct(os.stat(dir_file)[0])[-3:], pwd.getpwuid(os.stat(dir_file).st_uid)[0], modi_date(dir_file), dir_file),'yellow')
         else:
-            hour = day * 24
-            today = datetime.datetime.now()
-            #someday = today - datetime.timedelta(hours=hour)
-            file_date = datetime.datetime.utcfromtimestamp(
-                os.path.getmtime(file_name))
-
-            sub_time = today - file_date
-
-            if (sub_time < datetime.timedelta(hours=hour)):
-                print oct(os.stat(file_name)[
-                           0])[-3:], pwd.getpwuid(os.stat(file_name).st_uid)[0], modi_date(file_name), file_name
-
+            print colored((oct(os.stat(dir_file)[0])[-3:], pwd.getpwuid(os.stat(dir_file).st_uid)[0], modi_date(dir_file), dir_file),'white')
 
 
     def modi_date(file_name):  # file time
@@ -92,9 +83,21 @@ else:
                 #input_day(dir_file)
                 #print matches
                 cross_file.close()
-        if count > 1:
-            input_day(dir_file)
+        if day is None:
+            if count >1:
+                return to_count(dir_file,count)
+        else:
+            hour = day * 24
+            today = datetime.datetime.now()
+            #someday = today - datetime.timedelta(hours=hour)
+            file_date = datetime.datetime.utcfromtimestamp(
+                os.path.getmtime(dir_file))
 
+            sub_time = today - file_date
+
+            if (sub_time < datetime.timedelta(hours=hour)):
+                if count >1:
+                    to_count(dir_file,count)
     def open_folder(dir_folder):  # Open Folder
 
         if type is not None:
@@ -121,7 +124,7 @@ else:
                     'stream_socket_client',
                     'preg_replace',
                     'iframe']
-    print "\n----------------------------------------------------------- \n"
+    print colored("\n----------------------------------------------------------- \n",'green')
 
 
     #for x in patternarray:

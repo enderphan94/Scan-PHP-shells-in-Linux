@@ -32,7 +32,7 @@ optional arguments:
 $ python Eiker.py -D /home/ender/Downloads/
 ![Alt text](http://i.imgur.com/W3NZ4Bq.png)
 
-+ Scan entire Downloads directory with the files modified since 10 days
++ Scan entire Downloads directory with the files modified since **10 days**
 
 $ python Eiker.py -D /home/ender/Downloads/ -d 10
 ![Alt text](http://i.imgur.com/pAWROFA.png)

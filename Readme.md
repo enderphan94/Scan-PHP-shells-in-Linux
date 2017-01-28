@@ -6,6 +6,8 @@ Written by Python
 
 Oporating System: Linux (All Linux Distributions)
 
+Version 1.17
+
 # Intro
 
 The Eiker is created to help Linux Administrators / Cyber Security finding those malicious files which 

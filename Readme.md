@@ -35,3 +35,4 @@ $ python Eiker.py -D /home/ender/Downloads/
 + Scan entire Downloads directory with the files modified "3" days a go
 
 $ python Eiker.py -D /home/ender/Downloads/ -d 3
+![Alt text](http://i.imgur.com/pAWROFA.png)

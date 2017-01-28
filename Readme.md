@@ -8,8 +8,8 @@ Oporating System: Linux (All Linux Distributions)
 
 # Intro
 
-The Eiker is created to help Linux Administrators / Cyber Security can easy to find those malicious files which 
-would make harm to their server such as Backdoor, Malware and so on.
+The Eiker is created to help Linux Administrators / Cyber Security finding those malicious files which 
+would make harm to their server such as Backdoor, Malware and so on with just few command lines.
 
 # Usage: 
 
@@ -25,7 +25,14 @@ optional arguments:
   
   -t TYPE, --type TYPE  Chose file types you want to scan or blank if you want
                         to scan fully (e.g: .php, .html)
-                        
+# Color levels
+
+Red: high suspicion
+
+Yellow: medium suspicion
+
+White: low suspicion
+
 # Example:
 + Scan entire Downloads directory at all time
 

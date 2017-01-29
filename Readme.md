@@ -4,7 +4,7 @@ Coded by Ender Phan
 
 Written by Python 
 
-Oporating System: Linux (All Linux Distributions)
+Operating System: Linux (All Linux Distributions)
 
 Version 1.17
 

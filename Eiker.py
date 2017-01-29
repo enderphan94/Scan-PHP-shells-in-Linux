@@ -10,7 +10,7 @@ import stat
 import pwd
 import time
 from termcolor import colored
-
+import sys
 
 ##########################################################################
 #					SCAN SHELL TOOL	 							                                                 #
@@ -85,7 +85,7 @@ else:
                 cross_file.close()
         if day is None:
             if count >1:
-                return to_count(dir_file,count)
+                to_count(dir_file,count)
         else:
             hour = day * 24
             today = datetime.datetime.now()
@@ -124,6 +124,13 @@ else:
                     'stream_socket_client',
                     'preg_replace',
                     'iframe']
+    print "\n"
+    print "         _____ _ _              "
+    print "        | ____(_) | _____ _ __  "
+    print "        |  _| | | |/ / _ \ '__| "
+    print "        | |___| |   <  __/ |    "
+    print "        |_____|_|_|\_\___|_|    Version 1.17"
+
     print colored("\n----------------------------------------------------------- \n",'green')
 
 

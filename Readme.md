@@ -11,7 +11,7 @@ Version 1.17
 # Intro
 
 The Eiker is created to help Linux Administrators / Cyber Security finding those malicious files which 
-would make harm to their server such as Backdoor, Malware and so on with just few command lines.
+would make harm to their server such as Backdoor, Malware and so on with just a few command lines.
 
 # Usage: 
 

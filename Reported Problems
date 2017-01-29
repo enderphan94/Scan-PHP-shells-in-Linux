@@ -1,0 +1,10 @@
+Version 1.17:
+
+$ python scanShellSpace.py -D /home/ender/ -t php
+
+!!! The command does not work because the "ender" directory is too large and it contains too many sub-directories, thus the program
+cannot list all .php files
+
+Solution: - Scan without having file type:  $ python scanShellSpace.py -D /home/ender/
+
+          - Do not give a large directory if you want to scan with file type.

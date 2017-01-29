@@ -21,9 +21,9 @@ optional arguments:
 
   -h, --help            show this help message and exit
   
-  -D DIR, --dir DIR     Input Directory You Want To Scan
+  -D DIR, --dir DIR     Input Directory That You Want To Scan
   
-  -d DAY, --day DAY     You can choose what date you want to scan util today
+  -d DAY, --day DAY     Input the period of time you want to scan since the files are                         modified
   
   -t TYPE, --type TYPE  Chose file types you want to scan or blank if you want
                         to scan fully (e.g: .php, .html)

@@ -51,9 +51,9 @@ else:
 
 
     def to_count(dir_file,count):
-        if count >= 6:
+        if count >= 12:
             print colored((oct(os.stat(dir_file)[0])[-3:], pwd.getpwuid(os.stat(dir_file).st_uid)[0], modi_date(dir_file), dir_file),'red')
-        elif count < 6 and count > 2:
+        elif count < 12 and count > 6:
             print colored((oct(os.stat(dir_file)[0])[-3:], pwd.getpwuid(os.stat(dir_file).st_uid)[0], modi_date(dir_file), dir_file),'yellow')
         else:
             print colored((oct(os.stat(dir_file)[0])[-3:], pwd.getpwuid(os.stat(dir_file).st_uid)[0], modi_date(dir_file), dir_file),'white')
@@ -123,7 +123,14 @@ else:
                     'passthru',
                     'stream_socket_client',
                     'preg_replace',
-                    'iframe']
+                    'iframe',
+		    'shell_exec',
+		    'phpinfo',
+		    'chmod',
+	            'mkdir',
+		    'fopen',
+		    'fclose',
+		    'readfile']
     print "\n"
     print "         _____ _ _              "
     print "        | ____(_) | _____ _ __  "

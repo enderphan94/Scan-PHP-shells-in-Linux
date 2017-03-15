@@ -1,4 +1,4 @@
-# Eiker - Scanning Malicious Files in Linux Server
+# Eiker - Scanning Backdoors in Linux Server
 
 Coded by Ender Phan
 

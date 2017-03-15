@@ -12,12 +12,11 @@ import time
 from termcolor import colored
 import sys
 
-##########################################################################
-#					SCAN SHELL TOOL	 							                                                 #
-#			       	CODED by Ender Phan						                                                     #
-#               CODING WILL ChANGE THE WORLD - OTHERWISE IT COULD CHANGE YOUR MIND             			         #
-#										                                                                         #
-##########################################################################
+
+#				 SCAN SHELL TOOL	 							                                                 #
+#			       	CODED by Ender Phan						                                                     
+#               CODING WILL ChANGE THE WORLD - OTHERWISE IT COULD CHANGE YOUR MIND             			         
+
 
 parser = argparse.ArgumentParser()
 

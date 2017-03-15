@@ -1,0 +1,6 @@
+#!/bin/bash
+
+sudo apt-get update
+export LC_ALL=C
+apt-get install python-pip
+pip install termcolor

@@ -23,6 +23,8 @@ Module: termcolor
 
 + Install the needed modules and packages:
 
+    `$ cd Scan-Shell/`
+
     `$ chmod 777 install`
 
     `$ sudo ./install`

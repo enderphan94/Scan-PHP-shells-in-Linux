@@ -19,6 +19,8 @@ Module: termcolor
 
 # Installation
 
+Install the needed modules and packages:
+
     `$ chmod 777 install`
 
     `$ sudo ./install`

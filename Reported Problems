@@ -8,3 +8,5 @@ cannot list all .php files
 Solution: - Scan without having file type:  $ python scanShellSpace.py -D /home/ender/
 
           - Do not give a large directory if you want to scan with file type.
+
+========================BUG FIXED==========================================

@@ -17,6 +17,12 @@ would make harm to their server such as Backdoor, Malware and so on with just a 
 
 Module: termcolor
 
+# Installation
+
+    `$ chmod 777 install`
+
+    `$ sudo ./install`
+
 # Usage: 
 
 [-h] -D DIR [-d DAY] [-t TYPE]

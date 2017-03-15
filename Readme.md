@@ -19,7 +19,7 @@ Module: termcolor
 
 # Installation
 
-Install the needed modules and packages:
++ Install the needed modules and packages:
 
     `$ chmod 777 install`
 
@@ -50,17 +50,17 @@ White: low suspicion
 # Example:
 + Scan entire Downloads directory at all time
 
-$ python Eiker.py -D /home/ender/Downloads/
+   `$ python Eiker.py -D /home/ender/Downloads/`
 ![Alt text](http://i.imgur.com/W3NZ4Bq.png)
 
 + Scan entire Downloads directory with the files modified since **10 days**
 
-$ python Eiker.py -D /home/ender/Downloads/ -d 10
+   `$ python Eiker.py -D /home/ender/Downloads/ -d 10`
 ![Alt text](http://i.imgur.com/pAWROFA.png)
 
 + Scan entire Downloads directory at all time with file type is **.php**
 
-$ python Eiker.py -D /home/ender/Downloads/ -t php
+   `$ python Eiker.py -D /home/ender/Downloads/ -t php`
 ![Alt text](http://i.imgur.com/ctIPa7s.png)
 
 

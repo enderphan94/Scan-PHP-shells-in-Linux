@@ -101,7 +101,7 @@ else:
     def open_folder(dir_folder):  # Open Folder
 
         if type is not None:
-            for file1 in glob.glob(dir_folder + "/*" + type):
+            for file1 in glob.glob(dir_folder + "/**/*." + type):
                 if os.path.isfile(file1):
                     open_file(file1)
                 if os.path.isdir(file1):
@@ -146,7 +146,7 @@ else:
         #filenames = re.compile(r"" + x)
     if type is not None:
 
-        for file in glob.glob(dir + "/*" + type):
+        for file in glob.glob(dir + "/**/*." + type):
 
             if os.path.isfile(file):
                 open_file(file)

@@ -15,6 +15,7 @@ would make harm to their server such as Backdoor, Malware and so on with just a 
 
 # Requirements
 
+Python 2.7
 Module: termcolor
 
 # Installation

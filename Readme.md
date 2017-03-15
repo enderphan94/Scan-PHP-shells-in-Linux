@@ -35,7 +35,7 @@ optional arguments:
   
   -D DIR, --dir DIR     Input Directory That You Want To Scan
   
-  -d DAY, --day DAY     Input the period of time you want to scan since the files are                         modified
+  -d DAY, --day DAY     Input the period of time you want to scan since the file modified
   
   -t TYPE, --type TYPE  Chose file types you want to scan or blank if you want
                         to scan fully (e.g: .php, .html)

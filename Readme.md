@@ -2,7 +2,7 @@
 
 Coded by Ender Phan
 
-Written by Python 
+Written in Python 
 
 Operating System: Linux (All Linux Distribution)
 
